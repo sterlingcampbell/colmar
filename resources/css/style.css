@@ -64,14 +64,6 @@ nav span a:hover {
   color: red;
 }
 
-.main {
-  display: flex;
-  flex-direction: column;
-  position: relative;
-  top: 4rem;
-  width: 100%;
-}
-
 /* Gray container */
 .gray {
   background-color: lightgray;
@@ -79,7 +71,6 @@ nav span a:hover {
 
 .container {
   display: flex;
-  justify-content: flex-start;
 }
 
 .banner {
@@ -129,22 +120,25 @@ nav span a:hover {
 
 /* Second Container left column */
 
-.small-container .banner {
-  width: 100%;
+.main-section {
+  width: 60%;
+  padding: 2rem 1.5rem;
 }
 
-.small-container {
-   margin-right:1.5rem;
+.main-section img {
+  width: 100%;
+  height: auto;
 }
+
 #practice {
-  padding-left: 1.5rem;
+  text-align: left;
   padding-bottom: 2rem;
 }
 
 #practice h2 {
   font-size: 2rem;
   font-weight: bold;
-  margin-bottom: 1.5rem;
+  margin: 1.5rem 0;
 }
 
 #attribution {
@@ -153,38 +147,53 @@ nav span a:hover {
 
 /* Second Container Right Column */
 
-.info {
+.info-cards {
   display: flex;
-  flex-direction: column;
+  flex-wrap: wrap;
   width: 40%;
-  padding: 2rem 1.5rem;
-  margin-left: 1.5rem;
   border-left: 1px solid lightgray;
+  overflow: hidden;
 }
 
-.box {
-  display: inline-block;
-}
-
-.box-image:first-child {
-  padding-top:0;
-}
-
-.box-image {
-  
-  padding: 1rem;
-}
-
-.box-image {
-  height: auto;
+.info-card img {
   width: 35%;
+  height: auto;
+}
+
+.info-card {
+  display: flex;
+  padding: 1rem 0 1rem 1.5rem;
 
 }
 
-.box-content {
-  width: 65%;
+.card-content {
+  display: block;
+  margin: auto 0;
+  padding-left: 1.5rem;
 }
 
-.box:last-child {
+.card-content p {
+  width: 100%;
+  display: block;
+}
+
+.info-card:first-child {
+  padding-top: 2rem;
+}
+
+.info-card:last-child {
   background-color: lightgray;
+}
+
+.info-card h4 {
+  font-size: 1.5rem;
+}
+
+.info-card p, .read-more a {
+  font-size: 1.25rem;
+  margin-top: 1rem;
+}
+
+.read-more a {
+  color: #006989;
 }
