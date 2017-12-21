@@ -172,6 +172,8 @@ nav span a:hover {
 
 .info-card img {
       display: flex;
+      width: 35%;
+      height: auto;
       margin: 0;
       float: left;
       padding: 1rem;
