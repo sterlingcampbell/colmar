@@ -106,6 +106,7 @@ nav span a:hover {
   background-color: gray;
   text-align: center;
   width: 100%;
+  transition: all 200ms ease-in;
 }
 
 #start a {
@@ -116,13 +117,22 @@ nav span a:hover {
 
 #start:hover {
   background-color: red;
+  letter-spacing:1.5px;
 }
 
 /* Second Container left column */
 
+.second.container {
+  margin-bottom: 2rem;
+  width: 100%;
+  max-height: auto;
+  display: flex;
+  justify-content: flex-start;
+}
 .main-section {
-  width: 60%;
-  padding: 2rem 1.5rem;
+  max-width: 60%;
+  padding: 2rem 1.5rem 0 1.5rem;
+
 }
 
 .main-section img {
@@ -149,27 +159,41 @@ nav span a:hover {
 
 .info-cards {
   display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  position: relative;
   flex-wrap: wrap;
   width: 40%;
-  border-left: 1px solid lightgray;
   overflow: hidden;
+  height: auto;
+  padding: 1rem;
+  border-left: 1px solid lightgray;
 }
 
 .info-card img {
-  width: 35%;
-  height: auto;
+      display: flex;
+      width: 35%;
+      margin: 0;
+      float: left;
+      padding: 1rem;
 }
 
 .info-card {
   display: flex;
-  padding: 1rem 0 1rem 1.5rem;
-
+  justify-content: center;
+  align-items: stretch;
+  width: 100%;
+  border-bottom: 1px solid lightgray;
 }
 
 .card-content {
-  display: block;
+  position: relative;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  min-height: 100%;
+  width: 60%;
   margin: auto 0;
-  padding-left: 1.5rem;
 }
 
 .card-content p {
@@ -196,4 +220,109 @@ nav span a:hover {
 
 .read-more a {
   color: #006989;
+}
+
+/* Course Section */
+
+.services {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  padding-bottom: 2rem;
+}
+
+.section-title {
+  position: relative;
+  align-items: flex-start;
+  display: block;
+  width: 100%;
+  margin: auto 0;
+  font-size: 2rem;
+  font-weight: bold;
+  text-align: center;
+  padding-top: 2rem;
+}
+
+.course-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  width: 100%;
+  height: auto;
+  padding-top: 1rem;
+  margin: 0rem;
+}
+
+.course {
+  display: inline-block;
+  width: 25%;
+  margin: 1rem;
+  background-color: white;
+  overflow: hidden;
+  max-height: 18rem;
+  transition: background-color 200ms ease-in;
+  padding-bottom: 1.5rem;
+}
+
+.course:hover {
+  background-color: red;
+}
+
+.course img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.course-text {
+  display: inline-block;
+  padding: 1rem;
+}
+
+.course-text h4 {
+  font-size: 1.25rem;
+  font-weight: bold;
+  padding-bottom: 0.5rem;
+}
+
+#course-section {
+  padding: 0.5rem 0 1rem 0;
+}
+
+/* Thesis Exhibit */
+
+video {
+  padding-left: 1.5rem;
+}
+
+.text-descriptor {
+  padding: 1.5rem;
+}
+
+.text-descriptor h2 {
+  font-size: 2rem;
+  text-align: left;
+  margin-bottom: 1.5rem;
+}
+
+.text-descriptor p {
+  margin-bottom: 2rem;
+}
+
+/* Footer */
+
+footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+footer div {
+  display: flex;
+}
+
+footer div span {
+  margin: 1rem;
 }
