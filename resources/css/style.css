@@ -29,12 +29,12 @@ header {
   z-index: 20;
 }
 
-header div {
+.flex {
   padding-left: 1.5rem;
   align-items: center;
 }
 
-header div img {
+.logo-image {
   height: 4rem;
 }
 
@@ -62,6 +62,45 @@ nav span a {
 
 nav span a:hover {
   color: red;
+}
+
+/* Mobile Navbar */
+
+.flex-mobile {
+  display: none;
+}
+
+#mobile {
+  display: none;
+}
+
+@media only screen and (max-width: 470px) {
+
+  .flex-mobile {
+    display: flex;
+    height: 4rem;
+    width: 100%;
+    position: fixed;
+  }
+
+  nav {
+    padding: 0 1rem;
+  }
+
+  a nav {
+    display: inline-block;
+  }
+
+  .mobile-nav {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .header.flex {
+    display: hidden;
+  }
 }
 
 /* Gray container */
@@ -120,29 +159,49 @@ nav span a:hover {
   letter-spacing:1.5px;
 }
 
+@media only screen and (max-width: 470px) {
+  .container {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .banner {
+    width: 100%;
+    padding: 0;
+  }
+
+  #learn {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    max-width: 100%;
+  }
+
+  button {
+    width: 100%;
+  }
+}
+
 /* Second Container left column */
 
 .second.container {
-  margin-bottom: 2rem;
   width: 100%;
-  max-height: auto;
   display: flex;
   justify-content: flex-start;
 }
+
 .main-section {
   max-width: 60%;
-  padding: 2rem 1.5rem 0 1.5rem;
+  padding: 2rem 1.5rem;
 
 }
 
 .main-section img {
   width: 100%;
-  height: auto;
 }
 
 #practice {
   text-align: left;
-  padding-bottom: 2rem;
 }
 
 #practice h2 {
@@ -159,32 +218,31 @@ nav span a:hover {
 
 .info-cards {
   display: flex;
-  justify-content: flex-start;
+  justify-content: center;
   align-items: center;
   position: relative;
   flex-wrap: wrap;
   width: 40%;
   overflow: hidden;
-  height: auto;
-  padding: 1rem;
   border-left: 1px solid lightgray;
-}
 
-.info-card img {
-      display: flex;
-      width: 35%;
-      height: auto;
-      margin: 0;
-      float: left;
-      padding: 1rem;
 }
 
 .info-card {
   display: flex;
   justify-content: center;
-  align-items: stretch;
+  align-items: center;
   width: 100%;
   border-bottom: 1px solid lightgray;
+  padding: 1rem;
+  transition: all 250ms ease-in;
+}
+
+.info-card img {
+      display: flex;
+      width: 35%;
+      flex-shrink: 1;
+      flex-grow: 1;
 }
 
 .card-content {
@@ -194,16 +252,16 @@ nav span a:hover {
   flex-wrap: wrap;
   min-height: 100%;
   width: 60%;
-  margin: auto 0;
+  margin-left: 1.5rem;
 }
 
 .card-content p {
   width: 100%;
   display: block;
+  padding: 0.5rem 0;
 }
 
 .info-card:first-child {
-  padding-top: 2rem;
 }
 
 .info-card:last-child {
@@ -212,18 +270,61 @@ nav span a:hover {
 
 .info-card h4 {
   font-size: 1.5rem;
+  margin-bottom: 0.5rem;
 }
 
 .info-card p, .read-more a {
   font-size: 1.25rem;
-  margin-top: 1rem;
 }
 
 .read-more a {
-  color: #006989;
+  color: white;
+}
+
+#gray-one a {
+  color: lightgray;
+}
+
+.read-more a:hover {
+  text-decoration: underline;
+}
+
+.info-card:hover {
+  background-color: #b30000;
+}
+
+@media only screen and (max-width:470px) {
+
+  .main-section {
+    display: none;
+  }
+
+  .info-cards {
+    width: 100%;
+  }
+
+  #gray-one a{
+    color: white;
+  }
+
+  .info-card:last-child {
+    background-color: white;
+  }
+
+  .info-card:hover {
+    background-color: #b30000;
+  }
+
+
+
+
 }
 
 /* Course Section */
+
+#mobile-services {
+  display: hidden;
+}
 
 .services {
   display: flex;
@@ -272,7 +373,7 @@ nav span a:hover {
 }
 
 .course:hover {
-  background-color: red;
+  background-color: #b30000;
 }
 
 .course img {
@@ -296,6 +397,35 @@ nav span a:hover {
   padding: 0.5rem 0 1rem 0;
 }
 
+@media only screen and (max-width: 470px) {
+
+  .course-cards {
+    display: none;
+  }
+
+  .gray.services {
+    background-color: white;
+  }
+
+  #mobile-services {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    background-color: white;
+  }
+
+  #mobile-services span {
+    padding: 1.5rem;
+    background-color: lightgray;
+    margin: 1rem 0.5rem 0.5rem 0.5rem;
+    transition: background-color 250ms ease-in;
+  }
+
+  #mobile-services span:hover {
+    background-color: #b30000
+  }
+}
+
 /* Thesis Exhibit */
 
 .thesis {
@@ -304,7 +434,6 @@ nav span a:hover {
   align-items: flex-start;
   justify-content: flex-start;
   width: 100%;
-  max-height: auto;
   border-bottom: 1px solid lightgray;
   padding-bottom:2rem;
 }
@@ -339,7 +468,7 @@ nav span a:hover {
 }
 
 .modules {
-  width: 40%;
+  width: 39%;
   height: auto;
 }
 
@@ -363,6 +492,8 @@ nav span a:hover {
 
 .modules img {
   padding: 1rem;
+  flex-shrink: 1;
+  flex-grow: 1;
 }
 
 .text-content {
@@ -370,6 +501,37 @@ nav span a:hover {
   flex-direction: column;
   justify-content: center;
   width: 65%;
+}
+
+@media only screen and (max-width: 470px) {
+  .thesis video {
+    width: 100%;
+    margin:0;
+    padding: 0;
+  }
+
+  .text-descriptor {
+    display:none;
+  }
+
+  .main-section-thesis {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+  }
+
+  .modules {
+    display: none;
+  }
+
+  .terms {
+    display:none;
+  }
+
+  footer {
+    padding: 1.5rem 0.5rem;
+    border-top: 1px solid white;
+  }
 }
 
 /* Footer */
@@ -386,4 +548,8 @@ footer div {
 
 footer div span {
   margin: 1rem;
+}
+
+.terms span a:hover {
+  text-decoration: underline;  
 }
