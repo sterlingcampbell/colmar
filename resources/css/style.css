@@ -5,7 +5,7 @@ html {
 body {
   margin:0;
   padding:0;
-  font-family: sans-serif;
+  font-family: 'Raleway', sans-serif;
 }
 
 .flex {
@@ -323,7 +323,7 @@ nav span a:hover {
 /* Course Section */
 
 #mobile-services {
-  display: hidden;
+  display: none;
 }
 
 .services {
@@ -422,8 +422,24 @@ nav span a:hover {
   }
 
   #mobile-services span:hover {
-    background-color: #b30000
+    background-color: #b30000;
   }
+
+  .info-card {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .info-card img {
+    width: 100%;
+    margin-bottom: 1rem;
+    height: 12rem;
+  }
+
+  #desktop img {
+    display: none;
+  }
+
 }
 
 /* Thesis Exhibit */
@@ -488,6 +504,15 @@ nav span a:hover {
 .fisma, .now {
   display: flex;
   width: 100%;
+  transition: all 250ms ease-in;
+}
+
+.fisma:hover {
+  background-color: #b30000;
+}
+
+.now:hover {
+  background-color: #b30000;
 }
 
 .modules img {
@@ -551,5 +576,5 @@ footer div span {
 }
 
 .terms span a:hover {
-  text-decoration: underline;  
+  text-decoration: underline;
 }
